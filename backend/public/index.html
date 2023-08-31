@@ -8,33 +8,8 @@
   </head>
 
   <body>
-    <!-- <form>
-        <input type="email" name="email" class="email">
-        <input type="password" name="password" class="password">
-        <button class="submit"></button>
-    </form>
-    <video autoplay loop muted></video>
-    <script src="main.js"></script>
 
-    <script>
-        const constraints = {
-            video: true
-        };
-    
-        function handleSuccess(stream) {
-            document.querySelector('video').srcObject = stream;
-        }
-    
-        function handleError(error) {
-            console.log('getDisplayMedia error: ', error);
-        }
-    
-        navigator.mediaDevices.getDisplayMedia(constraints)
-                .then(handleSuccess)
-                .catch(handleError);
-    </script> -->
-
-    <video id="video" autoplay></video>
+    <!-- <video id="video" autoplay></video>
     <br />
     <button id="start-camera">Start Camera</button>
     <button class="stop-camera">Stop Camera</button>
@@ -45,12 +20,29 @@
     <br />
 
     <button class="start-screen-recording-btn">Start Screen Recording</button>
-    <a class="download-screen-recording">Download Screen Recording</a>
+    <a class="download-screen-recording">Download Screen Recording</a> -->
 
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
     <!-- <script src="screen_recorder.js"></script> -->
+    <!-- <script src="test.js"></script> -->
+    <!-- <script src="camera_recording.js"></script> -->
+
+
+    <div style="float: left">
+        <video class="recording" autoplay muted width="500px" 
+               height="500px"></video>
+    </div>
+    <div>
+        <h1>OUTPUT</h1>
+        <video class="output" autoplay controls width="500px" 
+               height="500px"></video>
+  
+        <button class="start-btn">Start Recording</button>
+        <button class="stop-btn">Stop Recording</button>
+        <a href="#" download="output.mp4" 
+           class="download-anc">Download</a>
+    </div>
     <script src="test.js"></script>
-    <script src="camera_recording.js"></script>
   </body>
 </html>
 
