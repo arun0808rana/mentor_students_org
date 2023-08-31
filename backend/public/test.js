@@ -1,12 +1,9 @@
-var video = document.querySelector('.recording');
-var output = document.querySelector('.output');
-var start = document.querySelector('.start-btn');
-var stop = document.querySelector('.stop-btn');
-var anc = document.querySelector(".download-anc")
-var data = [];
+
+let output = document.querySelector('.output');
+let data = [];
   
 // In order record the screen with system audio
-var recording = navigator.mediaDevices.getDisplayMedia({
+let recording = navigator.mediaDevices.getDisplayMedia({
     video: {
         mediaSource: 'screen',
     },
@@ -29,7 +26,7 @@ var recording = navigator.mediaDevices.getDisplayMedia({
            with MediaRecorder constructor */
         let recorder = new MediaRecorder(combine);
   
-        start.addEventListener('click', (e) => {
+        start_screen_recording_btn.addEventListener('click', (e) => {
   
             // Starts the recording when clicked
             recorder.start();
@@ -38,13 +35,7 @@ var recording = navigator.mediaDevices.getDisplayMedia({
             // For a fresh start
             data = []
         });
-  
-        stop.addEventListener('click', (e) => {
-  
-            // Stops the recording  
-            recorder.stop();
-            alert("recording stopped")
-        });
+        
   
         /* Push the recorded data to data array 
           when data available */
@@ -63,6 +54,6 @@ var recording = navigator.mediaDevices.getDisplayMedia({
   
             // Assign the url to the output video tag and anchor 
             output.src = url
-            anc.href = url
+            downloadScreenRecordingBtn.href = url
         };
     });
