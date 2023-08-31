@@ -63,3 +63,7 @@ stop_button.addEventListener("click", function () {
   media_recorder.stop();
   stopCamera();
 });
+
+
+
+// https://www.encora.com/insights/capturing-audio-video-with-webrtc

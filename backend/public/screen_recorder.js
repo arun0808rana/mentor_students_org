@@ -30,6 +30,9 @@
     //we have to start the recorder manually
     mediaRecorder.start();
 
+      // voiceStream for recording voice with screen recording
+  const voiceStream = await navigator.mediaDevices.getUserMedia({ audio: true, video: false });
+
     mediaRecorder.addEventListener("stop", function () {
       let blob = new Blob(chunks, {
         type: chunks[0].type,
@@ -44,3 +47,5 @@
   });
 
   // screen recording logic end
+
+  // https://dev.to/0shuvo0/lets-create-a-screen-recorder-with-js-3leb
